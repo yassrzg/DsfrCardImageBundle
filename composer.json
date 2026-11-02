@@ -1,0 +1,64 @@
+{
+    "name": "yassrzg/dsfr-card-image-bundle",
+    "description": "Images adaptées aux cartes du Système de Design de l'État (DSFR) pour Symfony : profils de recadrage ou d'ajustement, WebP, images dérivées en cache, fonction Twig.",
+    "type": "symfony-bundle",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "symfony",
+        "bundle",
+        "dsfr",
+        "image",
+        "thumbnail",
+        "webp",
+        "gd",
+        "twig"
+    ],
+    "homepage": "https://github.com/yassrzg/DsfrCardImageBundle",
+    "support": {
+        "issues": "https://github.com/yassrzg/DsfrCardImageBundle/issues",
+        "source": "https://github.com/yassrzg/DsfrCardImageBundle"
+    },
+    "require": {
+        "php": ">=8.3",
+        "psr/log": "^1.1|^2.0|^3.0",
+        "symfony/config": "^7.4|^8.0",
+        "symfony/dependency-injection": "^7.4|^8.0",
+        "symfony/filesystem": "^7.4|^8.0",
+        "symfony/http-foundation": "^7.4|^8.0",
+        "symfony/http-kernel": "^7.4|^8.0",
+        "symfony/routing": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.75",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-symfony": "^2.0",
+        "phpunit/phpunit": "^12.0",
+        "symfony/browser-kit": "^7.4|^8.0",
+        "symfony/console": "^7.4|^8.0",
+        "symfony/framework-bundle": "^7.4|^8.0",
+        "symfony/twig-bundle": "^7.4|^8.0",
+        "twig/twig": "^3.21"
+    },
+    "suggest": {
+        "ext-gd": "Traitement des images (sans GD, les originaux sont servis tels quels)",
+        "ext-exif": "Photos JPEG remises à l'endroit selon leur orientation EXIF",
+        "symfony/twig-bundle": "Fonction Twig card_image_url()",
+        "symfony/console": "Commande dsfr-card-image:purge"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yassrzg\\DsfrCardImageBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yassrzg\\DsfrCardImageBundle\\Tests\\": "tests/",
+            "Yassrzg\\DsfrCardImageBundle\\Tests\\App\\Src\\": "tests/App/src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
