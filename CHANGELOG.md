@@ -1,6 +1,6 @@
 # Changements
 
-## 1.0.0 — non publiée
+## 1.0.0 — 2026-11-02
 
 - Profils de traitement configurables (`dsfr_card_image.profiles`) : cadre, mode `cover` (recadrage centré) ou
   `contain` (image entière), format (`auto`, `webp`, `jpeg`, `png`), qualité ; jamais d'agrandissement.
