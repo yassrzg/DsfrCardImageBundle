@@ -72,6 +72,15 @@ final class BundleTest extends WebTestCase
         self::assertSame('%kernel.project_dir%/var/card_images', $config->getDefinition(VariantStorage::class)->getArgument(0));
     }
 
+    public function testProfileNamesAreKeptAsWritten(): void
+    {
+        $config = $this->load([['profiles' => ['logo-petit' => ['width' => 240, 'height' => 135], 'logo_grand' => ['width' => 800, 'height' => 450]]]]);
+
+        $profiles = $config->getDefinition(ProfileRegistry::class)->getArgument(0);
+        self::assertIsArray($profiles);
+        self::assertSame(['logo-petit', 'logo_grand'], array_keys($profiles), 'Tiret et tiret bas conservés.');
+    }
+
     public function testInvalidConfigurationIsRejected(): void
     {
         foreach ([

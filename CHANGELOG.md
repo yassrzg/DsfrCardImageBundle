@@ -1,5 +1,10 @@
 # Changements
 
+## 1.0.1 — 2026-11-09
+
+- Noms de profils gardés tels qu'écrits : un nom avec « - » (ex. `logo-petit`) n'est plus transformé en `logo_petit`
+  par la normalisation des clés de configuration (le profil restait introuvable sous son nom).
+
 ## 1.0.0 — 2026-11-02
 
 - Profils de traitement configurables (`dsfr_card_image.profiles`) : cadre, mode `cover` (recadrage centré) ou

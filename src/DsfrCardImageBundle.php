@@ -84,6 +84,8 @@ final class DsfrCardImageBundle extends AbstractBundle
             ->arrayNode('profiles')
                 ->info('Profils de traitement, par nom (lettres minuscules, chiffres, « _ », « - »). Remplacent les profils par défaut.')
                 ->useAttributeAsKey('name')
+                // Noms gardés tels qu'écrits (sans normalisation, « logo-petit » deviendrait « logo_petit »).
+                ->normalizeKeys(false)
                 ->defaultValue(self::DEFAULT_PROFILES)
                 ->arrayPrototype()
                     ->children()
