@@ -1,5 +1,10 @@
 # Changements
 
+## 1.0.2 — 2026-11-09
+
+- Auteur indiqué dans `composer.json`, la licence et le README ; données d'exemple des tests neutres. Aucun
+  changement de fonctionnement.
+
 ## 1.0.1 — 2026-11-09
 
 - Noms de profils gardés tels qu'écrits : un nom avec « - » (ex. `logo-petit`) n'est plus transformé en `logo_petit`
